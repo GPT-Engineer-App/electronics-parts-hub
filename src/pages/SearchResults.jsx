@@ -26,6 +26,7 @@ const SearchResults = () => {
             <Box key={product.id} textAlign="center">
               <Image src={product.image} alt={product.name} boxSize="150px" m="auto" />
               <Text mt={2}>{product.name}</Text>
+              <Text>{product.description}</Text>
               <Text fontWeight="bold">${product.price}</Text>
             </Box>
           ))

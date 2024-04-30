@@ -1,5 +1,7 @@
 import { Box, Flex, Input, InputGroup, InputLeftElement, SimpleGrid, Text, Image } from '@chakra-ui/react';
+import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const categories = [
   { name: 'Capacitors', image: '/images/capacitors.jpg' },
@@ -15,15 +17,17 @@ const featuredProducts = [
 ];
 
 const Index = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
   return (
     <Box p={5}>
       <Flex justifyContent="space-between" mb={10}>
         <Text fontSize="2xl" fontWeight="bold">Electronics Parts & Tools</Text>
-        <InputGroup w="300px">
+        <InputGroup as="form" onSubmit={(e) => { e.preventDefault(); navigate(`/search/${searchQuery}`); }} w="300px">
           <InputLeftElement pointerEvents="none">
             <FaSearch />
           </InputLeftElement>
-          <Input placeholder="Search for parts and tools" />
+          <Input placeholder="Search for parts and tools" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         </InputGroup>
       </Flex>
       <Box mb={10}>

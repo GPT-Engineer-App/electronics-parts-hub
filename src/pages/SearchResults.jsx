@@ -10,8 +10,10 @@ const SearchResults = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await client.getWithPrefix(`product:${keyword}`);
-      if (data) {
+      if (data && data.length > 0) {
         setResults(data.map(item => item.value));
+      } else {
+        setResults([]);
       }
     };
     fetchData();

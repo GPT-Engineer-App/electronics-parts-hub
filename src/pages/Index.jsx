@@ -11,9 +11,12 @@ const categories = [
 ];
 
 const featuredProducts = [
-  { name: 'Soldering Iron', price: '29.99', image: '/images/soldering_iron.jpg' },
-  { name: 'Multimeter', price: '49.99', image: '/images/multimeter.jpg' },
-  { name: 'Breadboard', price: '5.99', image: '/images/breadboard.jpg' }
+  { name: 'Soldering Iron', price: '29.99', image: '/images/soldering_iron.jpg', description: 'High-quality soldering iron perfect for all types of electronics work.' },
+  { name: 'Multimeter', price: '49.99', image: '/images/multimeter.jpg', description: 'Digital multimeter for accurate electrical measurements.' },
+  { name: 'Breadboard', price: '5.99', image: '/images/breadboard.jpg', description: 'Versatile breadboard for prototyping circuits.' },
+  { name: 'Oscilloscope', price: '199.99', image: '/images/oscilloscope.jpg', description: 'Compact digital oscilloscope with advanced features.' },
+  { name: 'Wire Stripper', price: '15.99', image: '/images/wire_stripper.jpg', description: 'Ergonomic wire stripper for easy insulation removal.' },
+  { name: 'Flux Pen', price: '7.99', image: '/images/flux_pen.jpg', description: 'Precision flux pen for improving soldering quality.' }
 ];
 
 const Index = () => {
